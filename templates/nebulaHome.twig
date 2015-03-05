@@ -1,0 +1,48 @@
+{% set title = 'Nebula Dashboard' %}
+{% extends 'nebula.twig' %}
+{% block head %}
+	{{ parent () }}
+{% endblock %}
+{% block nav %}
+	<nav>
+	{% for nav in nebulaHome %}
+		<a href="{{ nav.url }}">{{ nav.title }}</a>{{ loop.last ? '.' : ', ' }}
+	{% endfor %}
+	</nav>
+{% endblock %}
+{% block nebula %}
+  <article>
+    <p>
+    	Welcome to <a href="abc">Supercluster\Nebula</a>, a developer API
+    	for <a href="">Gravity</a> and <a href="">Orbit</a>.
+    </p>
+    <h2>{{ composer.name }}</h2>
+    <p>{{ composer.description }}</p>
+    <ul>
+    	<li><strong>License</strong>: {{ composer.license }}</li>
+    	<li><strong>Dependencies</strong>:
+		{% for dep, version in composer.require %}
+			{{ dep }} {{ version }}{{ loop.last ? '.' : ', ' }}<br>
+		{% endfor %}
+    	</li>
+    	<li><strong>Development Dependencies</strong>:
+		{% for dep, version in composer['require-dev'] %}
+			{{ dep }} {{ version }}{{ loop.last ? '.' : ', ' }}<br>
+		{% endfor %}
+    	</li>
+    	<li><strong>PSR Autoloaders</strong>:
+		{% for ns, path in composer.autoload['psr-0'] %}
+			<code>{{ ns }}</code> on path <code>{{ path }}{{ loop.last ? '.' : ', ' }}</code> (PSR-0)<br>
+		{% endfor %}
+		{% for ns, path in composer.autoload['psr-4'] %}
+			<code>{{ ns }}</code> on <code>{{ path }}{{ loop.last ? '.' : ', ' }}</code> (PSR-4)<br>
+		{% endfor %}
+    	</li>
+    	<li><strong>Scripts</strong>:
+		{% for hook, scripts in composer.scripts %}
+			<code>{{ hook }}</code>{{ loop.last ? '.' : ', ' }}
+		{% endfor %}
+    	</li>
+    </ul>
+  </article>
+{% endblock %}

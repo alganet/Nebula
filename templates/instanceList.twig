@@ -1,0 +1,17 @@
+{% set title = 'Container Instances List' %}
+{% extends 'cosmos.twig' %}
+{% block cosmos %}
+  <article>
+    <ul>
+	{% for key, instance in instanceList %}
+		{% if instance.value is not iterable %}
+		<li><strong>{{ key }}</strong>: {{ instance.value }}</li>
+		{% else %}
+		<li><strong>{{ key }}</strong>:
+		{% for iKey, iValue in instance.value %}{{ iKey }}:{{ iValue }}{{ loop.last ? '.' : ', ' }}{% endfor %}
+		</li>
+		{% endif %}
+	{% endfor %}
+    </ul>
+  </article>
+{% endblock %}

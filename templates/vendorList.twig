@@ -1,0 +1,30 @@
+{% set title = 'Clustered Vendor List' %}
+{% extends 'nebula.twig' %}
+{% block nebula %}
+  <article>
+	{% for vendor, data in vendorList %}
+    <h2>{{ data.name ? data.name : '[unknown] on ' ~ vendor}}</h2>
+	<ul>
+    	<li><strong>Location</strong>: {{ vendor }}</li>
+    	<li><strong>Loaded Configuration Files</strong>:
+		{% for loadFile in data.spec.load %}
+			{{ data.base }}/{{ loadFile }}{{ loop.last ? '.' : ', ' }}<br>
+		{% endfor %}
+    	</li>
+    	<li><strong>Declared Routes</strong>:
+		{% for route in data.spec.routes %}
+			{{ route }}{{ loop.last ? '.' : ', ' }}<br>
+		{% endfor %}
+    	<li><strong>Declared Collections</strong>:
+		{% for collection in data.spec.collections %}
+			{{ collection }}{{ loop.last ? '.' : ', ' }}<br>
+		{% endfor %}
+    	<li><strong>Declared Schemas</strong>:
+		{% for schema in data.spec.schemas %}
+			{{ schema }}{{ loop.last ? '.' : ', ' }}<br>
+		{% endfor %}
+    	</li>
+	</ul>
+	{% endfor %}
+  </article>
+{% endblock %}

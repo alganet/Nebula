@@ -1,0 +1,349 @@
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden] {
+    display: none;
+}
+
+html {
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+    margin: 0;
+}
+
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+}
+
+@-webkit-keyframes fallDown {
+  0% {
+    -webkit-transform: translateY(-20px);
+  } 100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fallDown {
+  0% {
+    -moz-transform: translateY(-20px);
+  }
+
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fallDown {
+  0% {
+    -o-transform: translateY(-20px);
+  }
+
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fallDown {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+body {
+  min-height: 10em;
+  position: relative;
+  color: #222;
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: "Ubuntu", "Arial", "Helvetica", "Nimbus Sans L", "Liberation Sans", "FreeSans", sans-serif;
+  margin: 0 auto;
+  padding: 0 4.5em 0 4.5em;
+  width: 40.5em;
+  max-width: 80em;
+  border: 0.01em solid transparent;
+  -webkit-box-shadow: 0em 0em 3em #EEE;
+     -moz-box-shadow: 0em 0em 3em #EEE;
+          box-shadow: 0em 0em 3em #EEE;
+}
+
+ul {
+  padding-top: 0.25em;
+  padding-bottom: 1.75em;
+}
+
+li {
+  line-height: 1.75;
+}
+
+strong, b {
+  font-weight: 500;
+}
+
+header, h1, nav {
+  -webkit-animation-fill-mode:both;
+  -moz-animation-fill-mode:both;
+  -ms-animation-fill-mode:both;
+  -o-animation-fill-mode:both;
+  animation-fill-mode:both;
+  -webkit-animation-name: fallDown;
+  -moz-animation-name: fallDown;
+  -o-animation-name: fallDown;
+  animation-name: fallDown;
+  -webkit-animation-duration: 300ms;
+  -moz-animation-duration: 300ms;
+  -ms-animation-duration: 300ms;
+  -o-animation-duration: 300ms;
+  animation-duration: 300ms;
+}
+
+header {
+  min-width: 20em;
+  width: 40.5em;
+  height: 4em;
+  top: 0;
+  position: fixed;
+  background: white;
+  z-index: 9;
+  -webkit-box-shadow: 0 1.5em 1.6em 1em white;
+     -moz-box-shadow: 0 1.5em 1.6em 1em white;
+          box-shadow: 0 1.5em 1.6em 1em white;
+  -webkit-animation-duration: 500ms;
+  -moz-animation-duration: 500ms;
+  -ms-animation-duration: 500ms;
+  -o-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-transition: top 180ms ease-in-out;
+     -moz-transition: top 180ms ease-in-out;
+          transition: top 180ms ease-in-out;
+}
+
+
+nav, footer {
+  font-family: "Ubuntu", "Arial", "Helvetica", "Nimbus Sans L", "Liberation Sans", "FreeSans", sans-serif;
+  padding-bottom: 1.5831em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #555;
+}
+nav {
+  font-size: 1.06em;
+  -webkit-animation-duration: 150ms;
+  -moz-animation-duration: 150ms;
+  -ms-animation-duration: 150ms;
+  -o-animation-duration: 150ms;
+  animation-duration: 150ms;
+}
+footer {
+  margin-top: 12.5em;
+  font-size: 0.9em;
+}
+footer a {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+nav ul, nav li {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+h1 a {
+  border: none;
+}
+
+h1 a:hover {
+  color: #222;
+}
+
+#home:target h1 a:hover {
+  color: inherit;
+}
+
+#home:target h1:hover:before {
+  content: "";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 0.1em solid #999;
+}
+a:visited { border-color: #CCC }
+a:hover   { border-color: #666 }
+
+h1, h2, h3 {
+  margin-top:0;
+  margin-bottom:0;
+  font-family: "Ubuntu Condensed", "Arial", "Helvetica", "Nimbus Sans L", "Liberation Sans", "FreeSans", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+h1 { font-size:2.57143em; padding:0.2831em 0 0; }
+h2 { font-size:1.71429em; padding-top:0.1487em; }
+h3 { font-size:1.5em; padding:1.75em 0; }
+
+q {
+  display: block;
+  padding: 1.5em 1em 0 1em;
+}
+
+cite {
+  font-size: 0.9em;
+  display: block;
+  text-align: right;
+}
+
+cite:before {
+  font-size: 0.9em;
+  content: "â€”";
+  padding-left: 1em;
+}
+
+article {
+
+  padding-top: 6.7em;
+  padding-bottom: 2em;
+  -webkit-transition: opacity 500ms linear;
+     -moz-transition: opacity 500ms linear;
+          transition: opacity 500ms linear;
+}
+
+
+
+@media (max-width: 22em) {
+  body { min-width: 22em; width: 99% }
+  header {
+    position: absolute;
+  }
+}
+
+@media (max-width: 50em) {
+  body {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+  }
+  header {
+    width: 95%;
+    position: absolute;
+  }
+  h1, h2, h3,
+  header nav,
+  footer {
+    text-align: center;
+  }
+}
+

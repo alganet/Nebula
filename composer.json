@@ -1,0 +1,48 @@
+{
+    "name": "supercluster/nebula",
+    "description": "A RESTful API to inspect Supercluster applications.",
+    "keywords": [ "supercluster" ],
+    "homepage": "https://github.com/Supercluster/Nebula",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php" : ">=5.5"
+    },
+    "suggest": {
+        "respect/rest": "version 0.6.x. Allow binding content to a router.",
+        "respect/relational": "version 0.6.x. Allow binding persistence to a mapper.",
+        "respect/config": "version 2.0.*@dev. Allow configuring objects using a container."
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Supercluster\\Nebula\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Supercluster\\Nebula\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "bin": ["bin/gravity"],
+    "authors": [
+        {
+            "name": "Alexandre Gaigalas",
+            "email": "alexandre@gaigalas.net",
+            "homepage": "http://gaigalas.net",
+            "role": "Developer"
+        },
+        {
+            "name": "William Espindola",
+            "email": "william@instinfo.com.br",
+            "homepage": "http://williamespindola.com.br",
+            "role": "Developer"
+        }
+    ]
+}

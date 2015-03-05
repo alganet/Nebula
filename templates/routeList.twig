@@ -1,0 +1,11 @@
+{% set title = 'Route List' %}
+{% extends 'nebula.twig' %}
+{% block nebula %}
+  <article>
+	{% for route in routeList %}
+    <p>
+		{{ dump(route) }}
+    </p>
+	{% endfor %}
+  </article>
+{% endblock %}
